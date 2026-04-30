@@ -1,12 +1,22 @@
 public class Warrior extends Character {
 
-    // TODO: Constructor бичнэ үү
-    // public Warrior(String name, int hp)
-    // - super(name, hp) дуудна
+    public Warrior(String name, int hp) {
+        super(name, hp);
+    }
 
-    // TODO: @Override attack(Character target) → int
-    // - 20 хохирол учруулна (target.takeDamage(20))
-    // - 20-г буцаана
-    // - Энэ нь parent-ын default 10 damage-ийг override хийнэ
+    @Override
+    public int attack(Character target) {
+        int damage = 20;
+        target.takeDamage(damage);
+        
+        System.out.println(this.getName() + " swings a mighty sword at " + target.getName() + "!");
+        
+        return damage;
+    }
 
+   
+    @Override
+    public String describe() {
+        return "wields a sword";
+    }
 }
