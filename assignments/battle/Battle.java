@@ -1,5 +1,3 @@
-package assignments.battle;
-
 public class Battle {
 
     public static int partyAttack(Character[] party, Character enemy) {
