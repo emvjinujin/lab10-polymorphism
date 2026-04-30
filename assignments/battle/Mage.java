@@ -1,11 +1,20 @@
 public class Mage extends Character {
 
-    // TODO: Constructor бичнэ үү
-    // public Mage(String name, int hp)
-    // - super(name, hp) дуудна
+    public Mage(String name, int hp) {
+        super(name, hp);
+    }
 
-    // TODO: @Override attack(Character target) → int
-    // - 15 хохирол учруулна (шидийн цохилт)
-    // - 15-г буцаана
+    @Override
+    public int attack(Character target) {
+        int magicDamage = 15;
+        target.takeDamage(magicDamage);
+     
+        System.out.println(this.getName() + " casts a fireball at " + target.getName() + "!");
+        
+        return magicDamage;
+    }
 
+    public String describe() {
+        return "channels magic";
+    }
 }
